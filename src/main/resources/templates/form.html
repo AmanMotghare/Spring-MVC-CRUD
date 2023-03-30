@@ -1,0 +1,80 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<br>
+
+<div class="formbold-main-wrapper">
+<div class="formbold-form-wrapper">
+  <hr>
+  <br>
+  <div align="center"><h3>Registration Form</h3></div>
+   <br>
+  <hr>
+  <br>
+
+    <form action="" th:action="@{/formSubmit}" method="POST" th:object="${empKey}">
+        <div class="formbold-input-flex">
+        
+          <div>
+              <label for="firstname" class="formbold-form-label"> First name </label>
+              <input
+              type="text"
+              name="firstname"
+              th:field="*{firstName}"
+              id="firstname"
+              placeholder="Jane"
+              class="formbold-form-input"
+              />
+          </div>
+          <div>
+              <label for="lastname" class="formbold-form-label"> Last name </label>
+              <input
+              type="text"
+              name="lastname"
+              th:field="*{lastName}"
+              id="lastname"
+              placeholder="Cooper"
+              class="formbold-form-input"
+              />
+          </div>
+        </div>
+
+        <div class="formbold-input-flex">
+          <div>
+              <label for="email" class="formbold-form-label"> Mail </label>
+              <input
+              type="email"
+              name="email"
+              th:field="*{mail}"
+              id="email"
+              placeholder="jhon@mail.com"
+              class="formbold-form-input"
+              />
+          </div>
+          <div>
+              <label for="phone" class="formbold-form-label"> Phone </label>
+              <input
+              type="text"
+              name="phone"
+              th:field="*{phone}"
+              id="phone"
+              placeholder="797-2040-698"
+              class="formbold-form-input"
+              />
+          </div>
+        </div>
+
+        <button type="submit" class="formbold-btn">
+            Register
+        </button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

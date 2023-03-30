@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Hey I am here to test the Expression 
+
+<div th:object="${keyObj}">
+	<p>Your First name  : <span th:text="${keyObj.firstName}">firstName hai</span></p><br/>
+	<p> Your Last name  : <span th:text="${keyObj.lastName}">lastName hai</span></p>
+
+</div>
+
+<div th:object="${keyObj1}">
+	<p>Your First name  : <span th:text="*{firstName}">firstName hai</span></p><br/>
+	<p> Your Last name  : <span th:text="*{lastName}">lastName hai</span></p>
+</div>
+
+</body>
+</html>
