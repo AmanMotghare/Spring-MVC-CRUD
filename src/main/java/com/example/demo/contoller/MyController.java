@@ -56,6 +56,7 @@ public class MyController {
 	public String updateEmployee(@PathVariable("id") int Id, Model m) {
 		
 		Employee e = es.getReferenceById(Id);
+		System.out.println(e);
 			
 		m.addAttribute("updateEmpKey", e);
 		
@@ -70,6 +71,7 @@ public class MyController {
 	
 	
 	
+	
 //	@RequestMapping("/testEx")
 //	public String testExpression(Model model ) {
 //		
@@ -79,11 +81,13 @@ public class MyController {
 //		model.addAttribute("keyObj", emp);
 //		model.addAttribute("keyObj1", emp1);
 //		
-//		return "pageTest";
-//	
-//	for(Employee emp : list) {
 //		List<Employee> list =  es.findAll();
-//		System.out.println(emp);
-//	}
+//		
+//		for(Employee emp2 : list) {
+//			
+//			System.out.println(emp2);
+//		}
+//		
+//		return "pageTest";
 //	}
 }
